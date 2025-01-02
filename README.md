@@ -185,12 +185,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## Contributing
-
-Contributions are welcome! Feel free to open issues or submit pull requests.
-
----
-
 ## Contact
 
-For inquiries or support, please contact: [your-email@example.com]
+For inquiries or support, please contact: [mustaphabouddahr347@gmail.com]
