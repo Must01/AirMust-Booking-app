@@ -179,12 +179,6 @@ Booking Details Page :
 
 ---
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## Contact
 
 For inquiries or support, please contact: [mustaphabouddahr347@gmail.com]
