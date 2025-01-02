@@ -108,7 +108,7 @@ const NewPlacefrom = () => {
   return (
     <div className="flex flex-col">
       <UserNavPage />
-      <div className="w-full px-4 ">
+      <div className="w-full px-4 lg:px-10">
         {error && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
             {error}
