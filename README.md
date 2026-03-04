@@ -29,6 +29,8 @@ Booking Details Page :
 - 📚 [Features](#features)
 - 💻 [Technologies Used](#technologies-used)
 - ⚙️ [Installation](#installation)
+  - [Option 1: Local Development](#option-1-local-development)
+  - [Option 2: Docker (Recommended)](#option-2-docker-recommended)
 - 🚀 [Usage](#usage)
 - 📡 [API Routes](#api-routes)
 - 🖼️ [Frontend Pages](#frontend-pages)
@@ -78,12 +80,14 @@ Booking Details Page :
 
 ## Installation
 
-### Prerequisites:
+### Option 1: Local Development
+
+#### Prerequisites:
 
 - 🖥️ Node.js and npm installed
 - 🍃 MongoDB instance running locally or remotely
 
-### Steps:
+#### Steps:
 
 1. 📂 Clone the repository:
 
@@ -134,9 +138,54 @@ Booking Details Page :
 
 ---
 
+### Option 2: Docker (Recommended)
+
+#### Prerequisites:
+
+- 🐳 Docker installed
+- 📦 Docker Compose installed
+
+#### Steps:
+
+1. 📂 Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. 🗂️ Navigate to the project directory:
+
+   ```bash
+   cd <project-folder>
+   ```
+
+3. ▶️ Build and run with Docker Compose:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+4. 🌐 Access the application at `http://localhost`
+
+#### Services:
+
+| Service | Port | Description |
+|---------|------|-------------|
+| Frontend | 80 | React app served by Nginx |
+| Backend | 3000 | Express API |
+| MongoDB | 27017 | Database |
+
+---
+
 ## Usage
 
-- 🌐 Access the application at `http://localhost:5173`.
+### Local Development:
+- 🌐 Access the frontend at `http://localhost:5173`
+- 🌐 Access the API at `http://localhost:3000`
+
+### Docker:
+- 🌐 Access the application at `http://localhost`
+
 - 🖱️ Interact with features such as registration, login, creating places, and booking.
 
 ---
