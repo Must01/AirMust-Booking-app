@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
-import { FaUserCircle } from "react-icons/fa";
+import { FaMoon, FaSun, FaUserCircle } from "react-icons/fa";
 import { UserContext } from "../../createContext";
 
 function Navbar() {
@@ -23,6 +23,14 @@ function Navbar() {
         <div className="font-semibold capitalize text-center">{user.name}</div>
       </>
     );
+  };
+
+  const toggleTheme = () => {
+    if (theme === "dark") {
+      setTheme("white");
+    } else {
+      setTheme("dark");
+    }
   };
 
   return (

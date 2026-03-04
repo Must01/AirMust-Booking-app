@@ -1,5 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+
+// create the context that other components will import to read from.
 export const UserContext = createContext({});
 
 export function UserContextProvider({ children }) {
@@ -21,7 +23,7 @@ export function UserContextProvider({ children }) {
         }
         setReady(true);
       });
-  }, []);
+  }, []); // run only ones when a component mounts
 
   return (
     <UserContext.Provider value={{ user, setUser, ready }}>

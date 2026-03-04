@@ -1,0 +1,29 @@
+services:
+  #backend
+  airmust-backend:
+    build: ./api
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URL=mongodb://admin:password@airmust-mongodb:27017/airmust?authsource=admin
+      - JWTSecret=05JyJNAB4doEqdV4ndrm2j3thM7WFGAqmilNLEiB3Gt
+      - Client_URL=http://airmust-frontend:80
+    depends_on:
+      - airmust-mongodb
+
+  #frontend
+  airmust-frontend:
+    build: ./client
+    ports:
+      - "80:80"
+    depends_on:
+      - airmust-backend
+
+  #mongodb
+  airmust-mongodb:
+    image: mongo:7.0.4
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    ports:
+      - "27017:27017"

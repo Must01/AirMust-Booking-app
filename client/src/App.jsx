@@ -17,6 +17,7 @@ import MyBooking from "./pages/userpages/mybooking.jsx";
 import NewPlacefrom from "./pages/userpages/userpagecomponents/newplaceform.jsx";
 import PlacePage from "./pages/placepage.jsx";
 import MyProfile from "./pages/userpages/myprofile.jsx";
+import { useContext } from "react";
 
 axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
@@ -24,7 +25,7 @@ axios.defaults.withCredentials = true;
 function App() {
   return (
     <UserContextProvider>
-      <div className=" min-h-screen  flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <div className="p-4">
           <NavBar className="" />
         </div>

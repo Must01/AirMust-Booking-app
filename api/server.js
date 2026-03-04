@@ -17,7 +17,8 @@ import { Place } from "./models/places.model.js";
 import { Booking } from "./models/booking.model.js";
 
 const bcryptSalt = bcryptjs.genSaltSync(10);
-const jwtSecret = "ahkflasdhfjksdhfjashlfweifh";
+const jwtSecret = process.env.jwtSecret;
+
 // configure dotenv
 dotenv.config();
 
@@ -34,8 +35,8 @@ app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173", // Allow requests only from this origin
-  })
+    origin: process.env.Client_URL || "http://localhost:5173", // Allow requests only from this origin
+  }),
 );
 
 // function to get user data from the token
@@ -48,7 +49,7 @@ function getUserDataFromReq(req) {
       async (err, userData) => {
         if (err) throw err;
         resolve(userData);
-      }
+      },
     );
   });
 }
@@ -88,7 +89,7 @@ app.post("/login", async (req, res) => {
       (err, token) => {
         if (err) throw err;
         res.cookie("token", token).json(userDoc);
-      }
+      },
     );
   } else {
     res.status(422).json({ success: false, message: "user not Found" });
